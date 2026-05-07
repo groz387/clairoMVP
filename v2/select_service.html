@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="actual">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clairo - Choose Service</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link href="clairo-ui.css" rel="stylesheet" />
+</head>
+
+<body class="app-page service-page" data-mode="actual">
+        <div class="app-layout">
+                <aside class="sidebar" aria-label="Workspace navigation">
+                        <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                <span class="brand-logo" aria-hidden="true"></span>
+                        </a>
+
+                        <nav class="sidebar-nav">
+                                <a class="nav-item" href="index.html" data-mode-link>
+                                        <span class="material-symbols-outlined">dashboard</span>
+                                        Overview
+                                </a>
+                                <a class="nav-item active" href="select_service.html" data-mode-link>
+                                        <span class="material-symbols-outlined filled-icon">assignment</span>
+                                        My Tasks
+                                </a>
+                                <a class="nav-item" href="document_preparation.html" data-mode-link>
+                                        <span class="material-symbols-outlined">folder_shared</span>
+                                        Vault
+                                </a>
+                                <a class="nav-item" href="task_complete.html" data-mode-link>
+                                        <span class="material-symbols-outlined">person</span>
+                                        Account
+                                </a>
+                        </nav>
+
+                        <div class="sidebar-footer">
+                                <div class="mini-progress">
+                                        <span>Step 1 of 3</span>
+                                        <div class="progress-track">
+                                                <div class="progress-fill" style="width: 33%"></div>
+                                        </div>
+                                </div>
+                                <a class="btn btn-dark" href="select_service.html" data-mode-link>Start New Application</a>
+                        </div>
+                </aside>
+
+                <main class="app-main">
+                        <header class="mobile-top">
+                                <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                        <span class="brand-logo" aria-hidden="true"></span>
+                                </a>
+                                <a class="icon-btn" href="index.html" data-mode-link aria-label="Home">
+                                        <span class="material-symbols-outlined">home</span>
+                                </a>
+                        </header>
+
+                        <div class="workspace">
+                                <section class="workflow-header" data-reveal>
+                                        <div class="header-row">
+                                                <div>
+                                                        <p class="eyebrow">Smart Path Matching</p>
+                                                        <h1 class="page-title">Choose a Service</h1>
+                                                        <p class="page-copy actual-only">Choose the admin problem. Clairo builds the packet around the exact documents you need.</p>
+                                                        <p class="page-copy demo-only">Demo data is ready. Move straight through the visa renewal flow.</p>
+                                                </div>
+                                                <p class="step-label">Step 1 of 3</p>
+                                        </div>
+                                        <div class="stepper" aria-label="Application progress">
+                                                <span class="step active"></span>
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                        </div>
+                                </section>
+
+                                <section class="content-grid tight">
+                                        <div class="service-grid" data-reveal>
+                                                <article class="service-card featured" data-service-card>
+                                                        <div class="card-top">
+                                                                <span class="card-icon material-symbols-outlined filled-icon">travel_explore</span>
+                                                                <span class="status-pill primary">Most common</span>
+                                                        </div>
+                                                        <div>
+                                                                <h2 class="card-title">Visa Renewal</h2>
+                                                                <p class="card-copy">Identity, enrollment, funds, appointment readiness.</p>
+                                                        </div>
+                                                        <a class="card-link" href="document_preparation.html?service=visa-renewal" data-mode-link>
+                                                                Build renewal packet
+                                                                <span class="material-symbols-outlined">arrow_forward</span>
+                                                        </a>
+                                                </article>
+
+                                                <article class="service-card" data-service-card>
+                                                        <div class="card-top">
+                                                                <span class="card-icon material-symbols-outlined filled-icon">home_work</span>
+                                                                <span class="status-pill">Guided</span>
+                                                        </div>
+                                                        <div>
+                                                                <h2 class="card-title">Residence Permit</h2>
+                                                                <p class="card-copy">Address proof, municipal forms, local appointments.</p>
+                                                        </div>
+                                                        <a class="card-link" href="document_preparation.html?service=residence-permit" data-mode-link>
+                                                                Start residence path
+                                                                <span class="material-symbols-outlined">arrow_forward</span>
+                                                        </a>
+                                                </article>
+
+                                                <article class="service-card" data-service-card>
+                                                        <div class="card-top">
+                                                                <span class="card-icon material-symbols-outlined filled-icon">health_and_safety</span>
+                                                                <span class="status-pill">Fastest</span>
+                                                        </div>
+                                                        <div>
+                                                                <h2 class="card-title">Health Insurance</h2>
+                                                                <p class="card-copy">Coverage proof, certificates, expiry checks.</p>
+                                                        </div>
+                                                        <a class="card-link" href="document_preparation.html?service=health-insurance" data-mode-link>
+                                                                Prepare proof
+                                                                <span class="material-symbols-outlined">arrow_forward</span>
+                                                        </a>
+                                                </article>
+
+                                                <article class="service-card" data-service-card>
+                                                        <div class="card-top">
+                                                                <span class="card-icon material-symbols-outlined filled-icon">school</span>
+                                                                <span class="status-pill">Campus</span>
+                                                        </div>
+                                                        <div>
+                                                                <h2 class="card-title">University Registration</h2>
+                                                                <p class="card-copy">Enrollment, housing, finance, and student ID.</p>
+                                                        </div>
+                                                        <a class="card-link" href="document_preparation.html?service=university-registration" data-mode-link>
+                                                                Register with campus
+                                                                <span class="material-symbols-outlined">arrow_forward</span>
+                                                        </a>
+                                                </article>
+                                        </div>
+
+                                        <aside class="side-stack" data-reveal>
+                                                <section class="surface-panel">
+                                                        <span class="kicker">
+                                                                <span class="material-symbols-outlined filled-icon">badge</span>
+                                                                Active Dossier
+                                                        </span>
+                                                        <h2 class="panel-title demo-only">Demo cast is loaded.</h2>
+                                                        <h2 class="panel-title actual-only">Your workspace is clean.</h2>
+                                                        <p class="panel-copy demo-only">Sample applicant, sponsor, housing, and contact data are ready for the pitch path.</p>
+                                                        <p class="panel-copy actual-only">Clairo asks only for the files and details attached to the selected service.</p>
+                                                </section>
+
+                                                <section class="surface-panel">
+                                                        <h2 class="panel-title">Case Readiness</h2>
+                                                        <div class="identity-list demo-only">
+                                                                <div class="identity-item">
+                                                                        <span class="avatar">VV</span>
+                                                                        <div>
+                                                                                <strong>Vincent Vega</strong>
+                                                                                <span>Applicant</span>
+                                                                        </div>
+                                                                        <span class="material-symbols-outlined filled-icon">done</span>
+                                                                </div>
+                                                                <div class="identity-item">
+                                                                        <span class="avatar">MB</span>
+                                                                        <div>
+                                                                                <strong>Michael Burry</strong>
+                                                                                <span>Financial sponsor</span>
+                                                                        </div>
+                                                                        <span class="material-symbols-outlined filled-icon">done</span>
+                                                                </div>
+                                                        </div>
+                                                        <div class="identity-list actual-only">
+                                                                <div class="identity-item">
+                                                                        <span class="avatar">+</span>
+                                                                        <div>
+                                                                                <strong>No applicant yet</strong>
+                                                                                <span>Added on the next screen</span>
+                                                                        </div>
+                                                                        <span class="material-symbols-outlined">arrow_forward</span>
+                                                                </div>
+                                                                <div class="identity-item">
+                                                                        <span class="avatar">AI</span>
+                                                                        <div>
+                                                                                <strong>Specter AI ready</strong>
+                                                                                <span>Checks start after intake</span>
+                                                                        </div>
+                                                                        <span class="material-symbols-outlined">psychology</span>
+                                                                </div>
+                                                        </div>
+                                                </section>
+                                        </aside>
+                                </section>
+
+                                <div class="action-strip">
+                                        <a class="btn btn-secondary" href="index.html" data-mode-link>Back to Overview</a>
+                                        <a class="btn btn-primary" href="document_preparation.html" data-mode-link>
+                                                Continue
+                                                <span class="material-symbols-outlined">arrow_forward</span>
+                                        </a>
+                                </div>
+                        </div>
+
+                        <footer class="footer">
+                                <div class="footer-inner">
+                                        <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                                <span class="brand-logo" aria-hidden="true"></span>
+                                        </a>
+                                        <div class="footer-copy">© 2026 Clairo. Empowering student journeys.</div>
+                                        <nav class="footer-links" aria-label="Footer navigation">
+                                                <a href="#">Privacy Policy</a>
+                                                <a href="#">Terms of Service</a>
+                                                <a href="#">Contact Support</a>
+                                        </nav>
+                                </div>
+                        </footer>
+                </main>
+        </div>
+
+        <script src="clairo-ui.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Clairo - Task Complete</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "primary-fixed-dim": "#ffb59f", "outline-variant": "#5c4038", "primary": "#ffb59f", "surface-container-high": "#2a2a2a", "on-primary-container": "#531200", "surface-container-highest": "#353535", "secondary-fixed-dim": "#c8c6c5", "secondary-fixed": "#e5e2e1", "on-tertiary": "#2f3131", "on-secondary-container": "#b7b5b4", "on-error-container": "#ffdad6", "on-background": "#e4e2e1", "on-tertiary-container": "#282a2a", "on-tertiary-fixed-variant": "#454747", "inverse-on-surface": "#303030", "surface-tint": "#ffb59f", "inverse-primary": "#af3100", "tertiary-fixed-dim": "#c6c6c7", "surface-container-low": "#1b1c1c", "secondary": "#c8c6c5", "on-primary-fixed-variant": "#862300", "on-primary": "#5f1600", "on-error": "#690005", "outline": "#ad897e", "surface-container": "#1f2020", "primary-fixed": "#ffdbd1", "surface": "#181818", "surface-bright": "#393939", "tertiary-fixed": "#e2e2e2", "on-secondary-fixed-variant": "#474746", "background": "#181818", "secondary-container": "#474746", "primary-container": "#ff571d", "error-container": "#93000a", "inverse-surface": "#e4e2e1", "tertiary": "#c6c6c7", "error": "#ffb4ab", "surface-dim": "#131313", "tertiary-container": "#909191", "surface-variant": "#353535", "on-surface": "#e4e2e1", "on-tertiary-fixed": "#1a1c1c", "on-secondary": "#313030", "surface-container-lowest": "#0e0e0e", "on-surface-variant": "#e6beb2", "on-primary-fixed": "#3a0a00", "on-secondary-fixed": "#1c1b1b"
+                                        },
+                                        "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                                        "spacing": { "gutter": "24px", "xs": "4px", "lg": "40px", "sm": "12px", "md": "24px", "xl": "60px", "base": "8px", "container-max": "1280px" },
+                                        "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-xl": ["Plus Jakarta Sans"], "label-bold": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] },
+                                        "fontSize": {
+                                                "label-sm": ["11px", { "lineHeight": "100%", "fontWeight": "600" }],
+                                                "body-md": ["14px", { "lineHeight": "160%", "fontWeight": "400" }],
+                                                "body-lg": ["16px", { "lineHeight": "160%", "fontWeight": "500" }],
+                                                "headline-lg": ["38px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                                                "display-xl": ["62px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                                                "label-bold": ["13px", { "lineHeight": "100%", "fontWeight": "700" }],
+                                                "headline-md": ["26px", { "lineHeight": "120%", "fontWeight": "700" }]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                * {
+                        transition: background-color 0.3s ease, color 0.2s ease, border-color 0.3s ease;
+                }
+
+                #theme-switcher {
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        z-index: 9999;
+                        background: #1f2020;
+                        border: 2px solid #5c4038;
+                        border-radius: 999px;
+                        padding: 8px 14px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+                }
+
+                #theme-switcher label {
+                        font-size: 10px;
+                        font-weight: 700;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        color: #c8c6c5;
+                        white-space: nowrap;
+                        font-family: 'Plus Jakarta Sans', sans-serif;
+                }
+
+                .theme-btn {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 3px solid transparent;
+                        cursor: pointer;
+                        transition: transform 0.2s, border-color 0.2s;
+                        display: block;
+                }
+
+                .theme-btn:hover {
+                        transform: scale(1.2);
+                }
+
+                .theme-btn.active {
+                        border-color: white;
+                        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+                }
+
+                .theme-btn[data-theme="dark-orange"] {
+                        background: linear-gradient(135deg, #252525, #ff571d);
+                }
+
+                .theme-btn[data-theme="light-orange"] {
+                        background: linear-gradient(135deg, #fff4ee, #e85800);
+                }
+
+                .theme-btn[data-theme="lime-green"] {
+                        background: linear-gradient(135deg, #f2fced, #5abf3c);
+                }
+
+                .theme-btn[data-theme="navy-blue"] {
+                        background: linear-gradient(135deg, #0d1b2a, #3b82f6);
+                }
+        </style>
+        <link href="clairo-ui.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased flex h-screen overflow-hidden">
+
+        <!-- Theme Switcher -->
+        <div id="theme-switcher">
+                <label>Theme</label>
+                <button class="theme-btn active" data-theme="dark-orange" title="Dark Orange"
+                        onclick="applyTheme('dark-orange')"></button>
+                <button class="theme-btn" data-theme="light-orange" title="Light Orange"
+                        onclick="applyTheme('light-orange')"></button>
+                <button class="theme-btn" data-theme="lime-green" title="Lime Green"
+                        onclick="applyTheme('lime-green')"></button>
+                <button class="theme-btn" data-theme="navy-blue" title="Navy Blue"
+                        onclick="applyTheme('navy-blue')"></button>
+        </div>
+
+        <div class="flex-1 flex flex-col h-full overflow-y-auto">
+                <main class="flex-1 px-10 py-xl max-w-[1100px] mx-auto w-full">
+                        <!-- Progress Indicator -->
+                        <div class="w-full max-w-2xl mx-auto mb-lg text-center">
+                                <span
+                                        class="font-label-bold text-label-bold text-on-background uppercase tracking-widest block mb-sm">Complete!</span>
+                                <div class="flex gap-2 h-3 w-full">
+                                        <div
+                                                class="h-full flex-1 bg-primary-container border-2 border-outline-variant rounded-full">
+                                        </div>
+                                        <div
+                                                class="h-full flex-1 bg-primary-container border-2 border-outline-variant rounded-full">
+                                        </div>
+                                        <div
+                                                class="h-full flex-1 bg-primary-container border-2 border-outline-variant rounded-full">
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!-- Hero Section -->
+                        <div class="flex flex-col items-center text-center mb-lg max-w-3xl mx-auto">
+                                <div
+                                        class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center border-4 border-outline-variant mb-md soft-pulse">
+                                        <span class="material-symbols-outlined text-on-primary-container"
+                                                style="font-size:42px;font-variation-settings:'FILL' 1;">check_circle</span>
+                                </div>
+                                <h1 class="font-display-xl text-display-xl text-on-background mb-md">You're all set!
+                                </h1>
+                                <p class="font-body-lg text-body-lg text-secondary mb-lg">
+                                        Your Visa Renewal application is ready to submit. We've verified your documents
+                                        and everything looks perfect.
+                                </p>
+                                <!-- Action Areas -->
+                                <div class="flex flex-col sm:flex-row gap-md w-full justify-center">
+                                        <a href="index.html"
+                                                class="bg-primary-container text-on-primary-container font-body-lg text-body-lg py-3 px-7 rounded-full hover:bg-primary transition-colors duration-200 flex items-center justify-center gap-2 w-fit lift-on-hover">
+                                                Go to My Dashboard <span
+                                                        class="material-symbols-outlined">arrow_forward</span>
+                                        </a>
+                                        <button
+                                                class="bg-surface text-primary border-2 border-primary font-body-lg text-body-lg py-3 px-7 rounded-full hover:bg-surface-variant transition-colors duration-200 flex items-center justify-center gap-2 lift-on-hover">
+                                                Review Application
+                                        </button>
+                                </div>
+                        </div>
+
+                        <div
+                                class="max-w-5xl mx-auto mb-lg bg-surface-container border-2 border-outline-variant rounded-xl p-5 grid grid-cols-1 md:grid-cols-4 gap-4 juice-card">
+                                <div class="md:col-span-1 border-b md:border-b-0 md:border-r border-outline-variant pb-4 md:pb-0 md:pr-5">
+                                        <p class="font-label-bold text-label-bold uppercase tracking-widest text-secondary mb-2">
+                                                Confidence</p>
+                                        <div class="flex items-end gap-2">
+                                                <span class="font-display-xl text-[48px] leading-none text-on-background">96</span>
+                                                <span class="font-headline-md text-headline-md text-primary">%</span>
+                                        </div>
+                                </div>
+                                <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                        <div class="bg-surface border border-outline-variant rounded-lg p-4">
+                                                <span class="material-symbols-outlined text-primary mb-2">rule</span>
+                                                <p class="font-label-bold text-label-bold uppercase tracking-widest text-on-background mb-1">
+                                                        Checked</p>
+                                                <p class="font-body-md text-body-md text-secondary">Names, dates, and
+                                                        document IDs match.</p>
+                                        </div>
+                                        <div class="bg-surface border border-outline-variant rounded-lg p-4">
+                                                <span class="material-symbols-outlined text-primary mb-2">schedule</span>
+                                                <p class="font-label-bold text-label-bold uppercase tracking-widest text-on-background mb-1">
+                                                        Timeline</p>
+                                                <p class="font-body-md text-body-md text-secondary">Submission window
+                                                        opens tomorrow.</p>
+                                        </div>
+                                        <div class="bg-surface border border-outline-variant rounded-lg p-4">
+                                                <span class="material-symbols-outlined text-primary mb-2">lock</span>
+                                                <p class="font-label-bold text-label-bold uppercase tracking-widest text-on-background mb-1">
+                                                        Secured</p>
+                                                <p class="font-body-md text-body-md text-secondary">Vault backup is
+                                                        ready for download.</p>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!-- Next Steps Bento -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-lg max-w-5xl mx-auto">
+                                <!-- Summary Card -->
+                                <div
+                                        class="bg-surface-container border-2 border-outline-variant p-7 rounded-xl col-span-1 md:col-span-2 flex flex-col md:flex-row items-center gap-gutter lift-on-hover">
+                                        <div class="flex-1">
+                                                <h2 class="font-headline-md text-headline-md mb-sm text-on-background">
+                                                        Application Summary</h2>
+                                                <ul class="font-body-md text-body-md space-y-2 text-on-surface-variant">
+                                                        <li class="flex items-center gap-2"><span
+                                                                        class="material-symbols-outlined text-primary-container">done</span>
+                                                                Form 104-A Completed</li>
+                                                        <li class="flex items-center gap-2"><span
+                                                                        class="material-symbols-outlined text-primary-container">done</span>
+                                                                Passport Scanned</li>
+                                                        <li class="flex items-center gap-2"><span
+                                                                        class="material-symbols-outlined text-primary-container">done</span>
+                                                                Biometrics Scheduled</li>
+                                                </ul>
+                                        </div>
+                                        <div
+                                                class="w-full md:w-64 bg-primary-container text-on-primary-container border-2 border-outline-variant rounded-xl p-5">
+                                                <p class="font-label-bold text-label-bold uppercase tracking-widest mb-3">
+                                                        Package ID</p>
+                                                <p class="font-headline-md text-headline-md">CL-104A-928</p>
+                                                <div class="mt-4 h-2 bg-surface-container-low rounded-full overflow-hidden">
+                                                        <div class="h-full w-full bg-primary-fixed progress-shimmer">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- Next Step 1 -->
+                                <div
+                                        class="bg-surface border-2 border-outline-variant p-7 rounded-xl relative overflow-hidden group hover:border-primary-container transition-colors duration-200 lift-on-hover">
+                                        <div
+                                                class="absolute inset-0 opacity-10 bg-gradient-to-br from-primary-container to-transparent z-0">
+                                        </div>
+                                        <div class="relative z-10 flex flex-col h-full">
+                                                <div class="flex items-center justify-between mb-md">
+                                                        <span
+                                                                class="font-label-bold text-label-bold uppercase tracking-widest bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full">Required</span>
+                                                        <span class="material-symbols-outlined text-primary-fixed-dim"
+                                                                style="font-size:28px;">calendar_month</span>
+                                                </div>
+                                                <h3 class="font-headline-md text-headline-md mb-sm text-on-background">
+                                                        Attend Biometrics</h3>
+                                                <p class="font-body-md text-body-md text-secondary mb-md flex-1">Your
+                                                        appointment is scheduled for Oct 14 at the Main Branch.</p>
+                                                <a class="font-body-lg text-body-lg text-primary flex items-center gap-1 hover:underline"
+                                                        href="#">View Details <span
+                                                                class="material-symbols-outlined">chevron_right</span></a>
+                                        </div>
+                                </div>
+
+                                <!-- Next Step 2 -->
+                                <div
+                                        class="bg-surface border-2 border-outline-variant p-7 rounded-xl relative overflow-hidden group hover:border-primary-container transition-colors duration-200 lift-on-hover">
+                                        <div class="relative z-10 flex flex-col h-full">
+                                                <div class="flex items-center justify-between mb-md">
+                                                        <span
+                                                                class="font-label-bold text-label-bold uppercase tracking-widest bg-surface-container-highest text-secondary px-3 py-1 rounded-full">Pending</span>
+                                                        <span class="material-symbols-outlined text-secondary"
+                                                                style="font-size:28px;">mark_email_read</span>
+                                                </div>
+                                                <h3 class="font-headline-md text-headline-md mb-sm text-on-background">
+                                                        Wait for Confirmation</h3>
+                                                <p class="font-body-md text-body-md text-secondary mb-md flex-1">We will
+                                                        notify you via email once your application is officially
+                                                        processing.</p>
+                                                <div
+                                                        class="h-14 w-full rounded-lg overflow-hidden mt-2 bg-surface-container-low flex items-center justify-center">
+                                                        <span class="material-symbols-outlined text-secondary"
+                                                                style="font-size:24px;">email</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!-- Feedback Section -->
+                        <div class="max-w-2xl mx-auto text-center border-t border-outline-variant pt-lg mb-10">
+                                <h4 class="font-headline-md text-headline-md mb-md text-on-background">How was this
+                                        process?</h4>
+                                <div class="flex justify-center gap-md">
+                                        <button
+                                                class="w-14 h-14 rounded-full border-2 border-outline-variant bg-surface hover:bg-surface-container-high hover:border-primary transition-all duration-200 flex items-center justify-center group focus:ring-4 focus:ring-primary-container focus:outline-none">
+                                                <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors"
+                                                        style="font-size:28px;">sentiment_dissatisfied</span>
+                                        </button>
+                                        <button
+                                                class="w-14 h-14 rounded-full border-2 border-outline-variant bg-surface hover:bg-surface-container-high hover:border-primary transition-all duration-200 flex items-center justify-center group focus:ring-4 focus:ring-primary-container focus:outline-none">
+                                                <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors"
+                                                        style="font-size:28px;">sentiment_neutral</span>
+                                        </button>
+                                        <button
+                                                class="w-14 h-14 rounded-full border-2 border-outline-variant bg-surface hover:bg-surface-container-high hover:border-primary transition-all duration-200 flex items-center justify-center group focus:ring-4 focus:ring-primary-container focus:outline-none">
+                                                <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors"
+                                                        style="font-size:28px;">sentiment_satisfied</span>
+                                        </button>
+                                </div>
+                        </div>
+                </main>
+
+                <!-- Footer -->
+                <footer
+                        class="bg-surface-container-lowest w-full mt-lg border-t-4 border-primary-container flex flex-col md:flex-row justify-between items-center px-10 py-gutter">
+                        <div class="font-headline-md text-headline-md text-on-background mb-4 md:mb-0">Clairo</div>
+                        <div class="font-body-md text-body-md text-primary text-center md:text-left mb-4 md:mb-0">© 2024
+                                Clairo Navigator. Empowering student journeys.</div>
+                        <nav class="flex gap-4">
+                                <a class="font-label-bold text-label-bold uppercase tracking-widest text-secondary hover:text-on-background transition-opacity"
+                                        href="#">Privacy Policy</a>
+                                <a class="font-label-bold text-label-bold uppercase tracking-widest text-secondary hover:text-on-background transition-opacity"
+                                        href="#">Terms of Service</a>
+                                <a class="font-label-bold text-label-bold uppercase tracking-widest text-secondary hover:text-on-background transition-opacity"
+                                        href="#">Contact Support</a>
+                        </nav>
+                </footer>
+        </div>
+
+        <script>
+                const THEMES = {
+                        'dark-orange': { html: 'dark', swBg: '#252525', swBorder: '#5c4038', swLabel: '#c8c6c5', c: { "primary": "#ffb59f", "primary-fixed-dim": "#ffb59f", "primary-fixed": "#ffdbd1", "primary-container": "#ff571d", "on-primary": "#5f1600", "on-primary-container": "#531200", "on-primary-fixed": "#3a0a00", "outline-variant": "#5c4038", "outline": "#ad897e", "surface-container-high": "#2a2a2a", "surface-container-highest": "#353535", "surface-container-low": "#1b1c1c", "surface-container-lowest": "#0e0e0e", "surface-container": "#1f2020", "surface": "#181818", "surface-bright": "#393939", "surface-variant": "#353535", "background": "#181818", "on-background": "#e4e2e1", "on-surface": "#e4e2e1", "on-surface-variant": "#e6beb2", "secondary": "#c8c6c5", "secondary-container": "#474746", "secondary-fixed": "#e5e2e1", "on-secondary": "#313030", "on-secondary-container": "#b7b5b4", "on-secondary-fixed": "#1c1b1b", "tertiary": "#c6c6c7", "tertiary-container": "#909191", "tertiary-fixed": "#e2e2e2", "on-tertiary": "#2f3131", "on-tertiary-container": "#282a2a", "on-tertiary-fixed": "#1a1c1c", "inverse-surface": "#e4e2e1", "inverse-on-surface": "#303030", "inverse-primary": "#af3100", "error": "#ffb4ab", "error-container": "#93000a", "on-error": "#690005", "on-error-container": "#ffdad6" } },
+                        'light-orange': { html: 'light', swBg: '#fff7f3', swBorder: '#f0c4b0', swLabel: '#7a3010', c: { "primary": "#c84d00", "primary-fixed-dim": "#e85800", "primary-fixed": "#ffe4d8", "primary-container": "#ff8a5c", "on-primary": "#ffffff", "on-primary-container": "#5a1400", "on-primary-fixed": "#3a0a00", "outline-variant": "#f0c4b0", "outline": "#d4845f", "surface-container-high": "#f5e8e2", "surface-container-highest": "#eeddd5", "surface-container-low": "#fdf6f3", "surface-container-lowest": "#ffffff", "surface-container": "#f9eeea", "surface": "#ffffff", "surface-bright": "#ffffff", "surface-variant": "#f5e8e2", "background": "#fff7f3", "on-background": "#25160e", "on-surface": "#25160e", "on-surface-variant": "#5e3524", "secondary": "#6b4030", "secondary-container": "#ffddd0", "secondary-fixed": "#ffddd0", "on-secondary": "#ffffff", "on-secondary-container": "#3b1206", "on-secondary-fixed": "#3b1206", "tertiary": "#5c5a00", "tertiary-container": "#e8e56a", "tertiary-fixed": "#f5f28c", "on-tertiary": "#ffffff", "on-tertiary-container": "#1c1a00", "on-tertiary-fixed": "#1c1a00", "inverse-surface": "#3a2518", "inverse-on-surface": "#ffede5", "inverse-primary": "#ffb59f", "error": "#ba1a1a", "error-container": "#ffdad6", "on-error": "#ffffff", "on-error-container": "#410002" } },
+                        'lime-green': { html: 'light', swBg: '#f0fbf0', swBorder: '#a8d8a0', swLabel: '#1a4a10', c: { "primary": "#2d7a1f", "primary-fixed-dim": "#5abf3c", "primary-fixed": "#d0f0c0", "primary-container": "#78d860", "on-primary": "#ffffff", "on-primary-container": "#0a3600", "on-primary-fixed": "#0a3600", "outline-variant": "#b0d8a8", "outline": "#6abf52", "surface-container-high": "#dff5d8", "surface-container-highest": "#d2eeca", "surface-container-low": "#f6fdf4", "surface-container-lowest": "#ffffff", "surface-container": "#edf9e8", "surface": "#ffffff", "surface-bright": "#ffffff", "surface-variant": "#dff5d8", "background": "#f2fcee", "on-background": "#0e2208", "on-surface": "#0e2208", "on-surface-variant": "#2a4c22", "secondary": "#3a6030", "secondary-container": "#c8eab8", "secondary-fixed": "#c8eab8", "on-secondary": "#ffffff", "on-secondary-container": "#0e2208", "on-secondary-fixed": "#0e2208", "tertiary": "#005f7a", "tertiary-container": "#b0e4f5", "tertiary-fixed": "#cceeff", "on-tertiary": "#ffffff", "on-tertiary-container": "#001f2a", "on-tertiary-fixed": "#001f2a", "inverse-surface": "#1a3014", "inverse-on-surface": "#e4f5dc", "inverse-primary": "#a0e888", "error": "#ba1a1a", "error-container": "#ffdad6", "on-error": "#ffffff", "on-error-container": "#410002" } },
+                        'navy-blue': { html: 'dark', swBg: '#0d1b2a', swBorder: '#1e3a5f', swLabel: '#90b8d8', c: { "primary": "#90c8f8", "primary-fixed-dim": "#60a8e8", "primary-fixed": "#cce4ff", "primary-container": "#1e5f9f", "on-primary": "#00264a", "on-primary-container": "#d0e8ff", "on-primary-fixed": "#00264a", "outline-variant": "#1e3a5f", "outline": "#3a6a9f", "surface-container-high": "#162234", "surface-container-highest": "#1e2d40", "surface-container-low": "#0a1520", "surface-container-lowest": "#060e17", "surface-container": "#0e1e2e", "surface": "#070f1a", "surface-bright": "#1a2a3c", "surface-variant": "#1e2d40", "background": "#070f1a", "on-background": "#d0e4f8", "on-surface": "#d0e4f8", "on-surface-variant": "#a8c8e8", "secondary": "#a0bcd8", "secondary-container": "#1a3050", "secondary-fixed": "#cce0f8", "on-secondary": "#001a2e", "on-secondary-container": "#b8d4f0", "on-secondary-fixed": "#001a2e", "tertiary": "#b8d8f8", "tertiary-container": "#2a4a6a", "tertiary-fixed": "#d8ecff", "on-tertiary": "#00243e", "on-tertiary-container": "#c8e4ff", "on-tertiary-fixed": "#00243e", "inverse-surface": "#d0e4f8", "inverse-on-surface": "#0a1a2c", "inverse-primary": "#0050a0", "error": "#ffb4ab", "error-container": "#93000a", "on-error": "#690005", "on-error-container": "#ffdad6" } }
+                };
+                function applyTheme(name) {
+                        const theme = THEMES[name]; if (!theme) return;
+                        try { localStorage.setItem('clairo-theme', name); } catch (e) { }
+                        document.documentElement.className = theme.html;
+                        const sw = document.getElementById('theme-switcher');
+                        if (sw) { sw.style.background = theme.swBg; sw.style.borderColor = theme.swBorder; const lbl = sw.querySelector('label'); if (lbl) lbl.style.color = theme.swLabel; }
+                        document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.theme === name));
+                        let st = document.getElementById('clairo-theme-vars');
+                        if (!st) { st = document.createElement('style'); st.id = 'clairo-theme-vars'; document.head.appendChild(st); }
+                        const c = theme.c;
+                        st.textContent = `.bg-background{background-color:${c['background']}!important}.bg-surface{background-color:${c['surface']}!important}.bg-surface-container{background-color:${c['surface-container']}!important}.bg-surface-container-low{background-color:${c['surface-container-low']}!important}.bg-surface-container-lowest{background-color:${c['surface-container-lowest']}!important}.bg-surface-container-high{background-color:${c['surface-container-high']}!important}.bg-surface-container-highest{background-color:${c['surface-container-highest']}!important}.bg-surface-variant{background-color:${c['surface-variant']}!important}.bg-primary{background-color:${c['primary']}!important}.bg-primary-container{background-color:${c['primary-container']}!important}.bg-primary-fixed{background-color:${c['primary-fixed']}!important}.bg-secondary-container{background-color:${c['secondary-container']}!important}.bg-tertiary-container{background-color:${c['tertiary-container']}!important}.bg-tertiary-fixed{background-color:${c['tertiary-fixed']}!important}.bg-inverse-surface{background-color:${c['inverse-surface']}!important}.bg-error-container{background-color:${c['error-container']}!important}.text-on-background{color:${c['on-background']}!important}.text-on-surface{color:${c['on-surface']}!important}.text-on-surface-variant{color:${c['on-surface-variant']}!important}.text-on-primary{color:${c['on-primary']}!important}.text-on-primary-container{color:${c['on-primary-container']}!important}.text-on-primary-fixed{color:${c['on-primary-fixed']}!important}.text-on-secondary{color:${c['on-secondary']}!important}.text-on-tertiary-container{color:${c['on-tertiary-container']}!important}.text-on-tertiary-fixed{color:${c['on-tertiary-fixed']}!important}.text-primary{color:${c['primary']}!important}.text-primary-container{color:${c['primary-container']}!important}.text-primary-fixed-dim{color:${c['primary-fixed-dim']}!important}.text-secondary{color:${c['secondary']}!important}.text-tertiary{color:${c['tertiary']}!important}.text-surface-bright{color:${c['surface-bright']}!important}.text-secondary-fixed{color:${c['secondary-fixed']}!important}.text-inverse-on-surface{color:${c['inverse-on-surface']}!important}.text-error{color:${c['error']}!important}.border-outline-variant{border-color:${c['outline-variant']}!important}.border-outline{border-color:${c['outline']}!important}.border-primary{border-color:${c['primary']}!important}.border-primary-container{border-color:${c['primary-container']}!important}.hover\\:bg-primary:hover{background-color:${c['primary']}!important}.hover\\:bg-primary-container:hover{background-color:${c['primary-container']}!important}.hover\\:bg-surface-container-high:hover{background-color:${c['surface-container-high']}!important}.hover\\:bg-surface-container-highest:hover{background-color:${c['surface-container-highest']}!important}.hover\\:border-primary:hover{border-color:${c['primary']}!important}.hover\\:text-primary:hover{color:${c['primary']}!important}.hover\\:text-on-background:hover{color:${c['on-background']}!important}.group:hover .group-hover\\:text-primary{color:${c['primary']}!important}body{background-color:${c['background']}!important;color:${c['on-background']}!important}#theme-switcher{background:${theme.swBg}!important;border-color:${theme.swBorder}!important}`;
+                }
+                (function () { let s = 'dark-orange'; try { s = localStorage.getItem('clairo-theme') || 'dark-orange'; } catch (e) { } if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => applyTheme(s)); else applyTheme(s); })();
+        </script>
+        <script src="clairo-ui.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="actual">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clairo - Packet Ready</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link href="clairo-ui.css" rel="stylesheet" />
+</head>
+
+<body class="app-page complete-page" data-mode="actual">
+        <div class="app-layout">
+                <aside class="sidebar" aria-label="Workspace navigation">
+                        <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                <span class="brand-logo" aria-hidden="true"></span>
+                        </a>
+
+                        <nav class="sidebar-nav">
+                                <a class="nav-item" href="index.html" data-mode-link>
+                                        <span class="material-symbols-outlined">dashboard</span>
+                                        Overview
+                                </a>
+                                <a class="nav-item active" href="select_service.html" data-mode-link>
+                                        <span class="material-symbols-outlined filled-icon">assignment</span>
+                                        My Tasks
+                                </a>
+                                <a class="nav-item" href="document_preparation.html" data-mode-link>
+                                        <span class="material-symbols-outlined">folder_shared</span>
+                                        Vault
+                                </a>
+                                <a class="nav-item" href="task_complete.html" data-mode-link>
+                                        <span class="material-symbols-outlined">person</span>
+                                        Account
+                                </a>
+                        </nav>
+
+                        <div class="sidebar-footer">
+                                <div class="mini-progress">
+                                        <span>Step 3 of 3</span>
+                                        <div class="progress-track">
+                                                <div class="progress-fill" style="width: 100%"></div>
+                                        </div>
+                                </div>
+                                <a class="btn btn-dark" href="select_service.html" data-mode-link>Start New Application</a>
+                        </div>
+                </aside>
+
+                <main class="app-main">
+                        <header class="mobile-top">
+                                <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                        <span class="brand-logo" aria-hidden="true"></span>
+                                </a>
+                                <a class="icon-btn" href="document_preparation.html" data-mode-link aria-label="Back to documents">
+                                        <span class="material-symbols-outlined">arrow_back</span>
+                                </a>
+                        </header>
+
+                        <div class="workspace">
+                                <section class="workflow-header" data-reveal>
+                                        <div class="header-row">
+                                                <div>
+                                                        <p class="eyebrow">Visa Renewal</p>
+                                                        <h1 class="page-title">Final Packet</h1>
+                                                        <p class="page-copy demo-only">Demo bundle assembled. No blockers found.</p>
+                                                        <p class="page-copy actual-only">Draft built. Missing files stay visible until they are verified.</p>
+                                                </div>
+                                                <p class="step-label">Step 3 of 3</p>
+                                        </div>
+                                        <div class="stepper" aria-label="Application progress">
+                                                <span class="step done"></span>
+                                                <span class="step done"></span>
+                                                <span class="step active"></span>
+                                        </div>
+                                </section>
+
+                                <section class="content-grid tight">
+                                        <div class="stack" data-reveal>
+                                                <article class="complete-banner">
+                                                        <span class="kicker">
+                                                                <span class="material-symbols-outlined filled-icon">verified</span>
+                                                                Packet Status
+                                                        </span>
+                                                        <div>
+                                                                <h1 class="demo-only">Vincent Vega is ready to submit.</h1>
+                                                                <h1 class="actual-only">Your packet draft is ready.</h1>
+                                                                <p class="demo-only">Forms, files, and consistency checks are bundled for review.</p>
+                                                                <p class="actual-only">Review the generated checklist, add any missing documents, then submit when ready.</p>
+                                                        </div>
+                                                        <div class="complete-actions">
+                                                                <button class="btn btn-primary" type="button">
+                                                                        <span class="material-symbols-outlined filled-icon">download</span>
+                                                                        Download Packet
+                                                                </button>
+                                                                <button class="btn btn-secondary" type="button">
+                                                                        <span class="material-symbols-outlined">support_agent</span>
+                                                                        Talk to Human
+                                                                </button>
+                                                        </div>
+                                                </article>
+
+                                                <section class="summary-grid three" aria-label="Packet summary">
+                                                        <article class="summary-card">
+                                                                <span class="card-icon material-symbols-outlined filled-icon">edit_document</span>
+                                                                <div>
+                                                                        <h2 class="card-title">Forms Generated</h2>
+                                                                        <p class="card-copy demo-only">Four forms filled with aligned names and dates.</p>
+                                                                        <p class="card-copy actual-only">Core forms drafted from available details.</p>
+                                                                </div>
+                                                        </article>
+
+                                                        <article class="summary-card">
+                                                                <span class="card-icon material-symbols-outlined filled-icon">rule</span>
+                                                                <div>
+                                                                        <h2 class="card-title">Consistency Checked</h2>
+                                                                        <p class="card-copy demo-only">Passport, school, bank, and housing names match.</p>
+                                                                        <p class="card-copy actual-only">Names, IDs, and file status are checked.</p>
+                                                                </div>
+                                                        </article>
+
+                                                        <article class="summary-card">
+                                                                <span class="card-icon material-symbols-outlined filled-icon">event_available</span>
+                                                                <div>
+                                                                        <h2 class="card-title">Next Action Clear</h2>
+                                                                        <p class="card-copy demo-only">Thursday morning appointment is held.</p>
+                                                                        <p class="card-copy actual-only">Appointment options appear after confirmation.</p>
+                                                                </div>
+                                                        </article>
+                                                </section>
+                                        </div>
+
+                                        <aside class="side-stack" data-reveal>
+                                                <section class="surface-panel">
+                                                        <span class="status-pill primary">Specter AI confidence</span>
+                                                        <div>
+                                                                <div class="confidence-number demo-only">96%</div>
+                                                                <div class="confidence-number actual-only">82%</div>
+                                                                <p class="panel-copy demo-only">Identity, funds, and address are matched.</p>
+                                                                <p class="panel-copy actual-only">Confidence rises as files verify.</p>
+                                                        </div>
+                                                        <div class="progress-track">
+                                                                <div class="progress-fill demo-only" style="width: 96%"></div>
+                                                                <div class="progress-fill actual-only" style="width: 82%"></div>
+                                                        </div>
+                                                </section>
+
+                                                <section class="surface-panel">
+                                                        <h2 class="panel-title">Submission Timeline</h2>
+                                                        <div class="timeline">
+                                                                <div class="timeline-row">
+                                                                        <div>
+                                                                                <strong>Packet assembled</strong>
+                                                                                <span>Forms, files, and checks bundled</span>
+                                                                        </div>
+                                                                        <span class="status-pill primary">Done</span>
+                                                                </div>
+                                                                <div class="timeline-row">
+                                                                        <div>
+                                                                                <strong>Student review</strong>
+                                                                                <span>Download or approve checklist</span>
+                                                                        </div>
+                                                                        <span class="status-pill">Now</span>
+                                                                </div>
+                                                                <div class="timeline-row">
+                                                                        <div>
+                                                                                <strong>Authority appointment</strong>
+                                                                                <span class="demo-only">Thursday, 10:30 at Main Branch</span>
+                                                                                <span class="actual-only">Slot appears after confirmation</span>
+                                                                        </div>
+                                                                        <span class="material-symbols-outlined">calendar_month</span>
+                                                                </div>
+                                                        </div>
+                                                </section>
+                                        </aside>
+                                </section>
+
+                                <div class="action-strip">
+                                        <a class="btn btn-secondary" href="document_preparation.html" data-mode-link>Edit Documents</a>
+                                        <button class="btn btn-primary" id="btn-download-packet">
+                                                Download Packet
+                                                <span class="material-symbols-outlined">download</span>
+                                        </button>
+                                </div>
+                        </div>
+
+                        <footer class="footer">
+                                <div class="footer-inner">
+                                        <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                                <span class="brand-logo" aria-hidden="true"></span>
+                                        </a>
+                                        <div class="footer-copy">© 2026 Clairo. Empowering student journeys.</div>
+                                        <nav class="footer-links" aria-label="Footer navigation">
+                                                <a href="#">Privacy Policy</a>
+                                                <a href="#">Terms of Service</a>
+                                                <a href="#">Contact Support</a>
+                                        </nav>
+                                </div>
+                        </footer>
+                </main>
+        </div>
+
+        <script src="clairo-ui.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Document Checklist - Clairo Navigator</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "primary-fixed-dim": "#ffb59f",
+                                                "outline-variant": "#5c4038",
+                                                "primary": "#ffb59f",
+                                                "surface-container-high": "#2a2a2a",
+                                                "on-primary-container": "#531200",
+                                                "surface-container-highest": "#353535",
+                                                "secondary-fixed-dim": "#c8c6c5",
+                                                "secondary-fixed": "#e5e2e1",
+                                                "on-tertiary": "#2f3131",
+                                                "on-secondary-container": "#b7b5b4",
+                                                "on-error-container": "#ffdad6",
+                                                "on-background": "#e4e2e1",
+                                                "on-tertiary-container": "#282a2a",
+                                                "on-tertiary-fixed-variant": "#454747",
+                                                "inverse-on-surface": "#303030",
+                                                "surface-tint": "#ffb59f",
+                                                "inverse-primary": "#af3100",
+                                                "tertiary-fixed-dim": "#c6c6c7",
+                                                "surface-container-low": "#1b1c1c",
+                                                "secondary": "#c8c6c5",
+                                                "on-primary-fixed-variant": "#862300",
+                                                "on-primary": "#5f1600",
+                                                "on-error": "#690005",
+                                                "outline": "#ad897e",
+                                                "surface-container": "#1f2020",
+                                                "primary-fixed": "#ffdbd1",
+                                                "surface": "#131313",
+                                                "surface-bright": "#393939",
+                                                "tertiary-fixed": "#e2e2e2",
+                                                "on-secondary-fixed-variant": "#474746",
+                                                "background": "#131313",
+                                                "secondary-container": "#474746",
+                                                "primary-container": "#ff571d",
+                                                "error-container": "#93000a",
+                                                "inverse-surface": "#e4e2e1",
+                                                "tertiary": "#c6c6c7",
+                                                "error": "#ffb4ab",
+                                                "surface-dim": "#131313",
+                                                "tertiary-container": "#909191",
+                                                "surface-variant": "#353535",
+                                                "on-surface": "#e4e2e1",
+                                                "on-tertiary-fixed": "#1a1c1c",
+                                                "on-secondary": "#313030",
+                                                "surface-container-lowest": "#0e0e0e",
+                                                "on-surface-variant": "#e6beb2",
+                                                "on-primary-fixed": "#3a0a00",
+                                                "on-secondary-fixed": "#1c1b1b"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "gutter": "24px",
+                                                "xs": "4px",
+                                                "lg": "48px",
+                                                "sm": "12px",
+                                                "md": "24px",
+                                                "xl": "80px",
+                                                "base": "8px",
+                                                "container-max": "1280px"
+                                        },
+                                        "fontFamily": {
+                                                "label-sm": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "body-md": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "body-lg": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "headline-lg": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "display-xl": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "label-bold": [
+                                                        "Plus Jakarta Sans"
+                                                ],
+                                                "headline-md": [
+                                                        "Plus Jakarta Sans"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "label-sm": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "100%",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "160%",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "160%",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "110%",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "display-xl": [
+                                                        "80px",
+                                                        {
+                                                                "lineHeight": "100%",
+                                                                "letterSpacing": "-0.04em",
+                                                                "fontWeight": "800"
+                                                        }
+                                                ],
+                                                "label-bold": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "100%",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "120%",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <link href="clairo-ui.css" rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-background min-h-screen flex antialiased">
+        <!-- SideNavBar (Semantic Intent: My Tasks) -->
+        <nav
+                class="fixed left-0 top-0 h-full w-64 bg-surface-container text-primary flex flex-col py-gutter gap-md border-r-2 border-outline-variant z-50 hidden md:flex">
+                <div class="px-md">
+                        <h1 class="font-headline-md text-headline-md text-on-surface">Clairo</h1>
+                        <p class="font-label-sm text-label-sm uppercase text-on-surface-variant mt-1">Navigator</p>
+                </div>
+                <div class="flex-grow flex flex-col gap-2 mt-8 px-4">
+                        <a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest rounded-lg mx-2 transition-transform duration-200 hover:translate-x-1"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                                <span class="font-label-sm text-label-sm uppercase">Overview</span>
+                        </a>
+                        <a class="flex items-center gap-4 px-4 py-3 bg-primary-container text-on-primary-container border-2 border-outline-variant rounded-lg mx-2 border-l-4 border-primary transition-transform duration-200 hover:translate-x-1"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="assignment"
+                                        style="font-variation-settings: 'FILL' 1;">assignment</span>
+                                <span class="font-label-sm text-label-sm uppercase">My Tasks</span>
+                        </a>
+                        <a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest rounded-lg mx-2 transition-transform duration-200 hover:translate-x-1"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="folder_shared">folder_shared</span>
+                                <span class="font-label-sm text-label-sm uppercase">Vault</span>
+                        </a>
+                        <a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest rounded-lg mx-2 transition-transform duration-200 hover:translate-x-1"
+                                href="#">
+                                <span class="material-symbols-outlined" data-icon="person">person</span>
+                                <span class="font-label-sm text-label-sm uppercase">Account</span>
+                        </a>
+                </div>
+                <div class="px-4 mt-auto">
+                        <button
+                                class="w-full bg-on-background text-on-primary font-label-bold text-label-bold py-4 rounded-full hover:bg-primary transition-colors flex justify-center items-center gap-2">
+                                Start New Application
+                        </button>
+                </div>
+        </nav>
+        <!-- Main Content Canvas -->
+        <main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+                <!-- Mobile TopAppBar Fallback (Since SideNav is hidden on mobile) -->
+                <header
+                        class="md:hidden flex justify-between items-center w-full px-md py-md max-w-full mx-auto bg-surface z-40 sticky top-0 border-b-2 border-outline-variant">
+                        <h1 class="font-headline-lg text-headline-lg font-bold text-on-background">Clairo</h1>
+                        <button class="text-on-background">
+                                <span class="material-symbols-outlined" data-icon="menu" data-weight="fill"
+                                        style="font-variation-settings: 'FILL' 1; font-size: 32px;">menu</span>
+                        </button>
+                </header>
+                <div class="px-md py-xl max-w-5xl mx-auto w-full flex-grow">
+                        <!-- Progress Indicator -->
+                        <div class="mb-xl">
+                                <div class="flex justify-between items-end mb-4">
+                                        <div>
+                                                <p class="font-label-sm text-label-sm uppercase text-secondary mb-1">
+                                                        Visa Renewal</p>
+                                                <h2 class="font-headline-md text-headline-md text-on-background">
+                                                        Document Collection</h2>
+                                        </div>
+                                        <span class="font-label-sm text-label-sm uppercase text-on-background">Step 2 of
+                                                3</span>
+                                </div>
+                                <div class="flex gap-2 h-4 w-full">
+                                        <div class="flex-1 bg-primary rounded-full border border-outline-variant"></div>
+                                        <div class="flex-1 bg-primary rounded-full border border-outline-variant"></div>
+                                        <div
+                                                class="flex-1 bg-surface-container border border-outline-variant opacity-20 rounded-full">
+                                        </div>
+                                </div>
+                                <div
+                                        class="mt-md bg-surface-container border border-outline-variant rounded-xl p-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+                                        <div class="flex items-center gap-3">
+                                                <span class="material-symbols-outlined text-primary">document_scanner</span>
+                                                <span class="font-label-bold text-label-bold uppercase tracking-widest text-on-background">2
+                                                        scanned</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                                <span class="material-symbols-outlined text-primary">rule</span>
+                                                <span class="font-label-bold text-label-bold uppercase tracking-widest text-on-background">1
+                                                        needs upload</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                                <span class="material-symbols-outlined text-primary">shield</span>
+                                                <span class="font-label-bold text-label-bold uppercase tracking-widest text-on-background">Vault
+                                                        protected</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- Bento Grid Layout for Checklist -->
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-md">
+                                <!-- Main Checklist Column -->
+                                <div class="lg:col-span-8 flex flex-col gap-md">
+                                        <div
+                                                class="bg-surface border-2 border-outline-variant rounded-xl p-md relative group overflow-hidden lift-on-hover">
+                                                <!-- Decorative Header Strip -->
+                                                <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+                                                <div class="flex items-start gap-4 mb-4 mt-2">
+                                                        <div class="mt-1">
+                                                                <input checked=""
+                                                                        class="w-6 h-6 rounded border-2 border-outline-variant text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface bg-surface transition-colors cursor-pointer"
+                                                                        id="doc1" type="checkbox" />
+                                                        </div>
+                                                        <div class="flex-1">
+                                                                <div class="flex items-center gap-3 mb-2">
+                                                                        <h3
+                                                                                class="font-headline-md text-[24px] leading-[32px] text-on-background">
+                                                                                <label class="cursor-pointer"
+                                                                                        for="doc1">Current
+                                                                                        Passport</label></h3>
+                                                                        <span
+                                                                                class="bg-primary-container text-on-primary-container font-label-sm uppercase text-[12px] px-3 py-1 rounded-full">Required</span>
+                                                                </div>
+                                                                <p class="font-body-md text-body-md text-secondary">Must
+                                                                        be valid for at least 6 months beyond your
+                                                                        intended stay. Ensure you have at least two
+                                                                        blank pages available.</p>
+                                                        </div>
+                                                </div>
+                                                <!-- Uploaded State UI -->
+                                                <div
+                                                        class="ml-10 mt-4 bg-surface-container-low border border-outline-variant border-opacity-50 rounded-lg p-4 flex items-center justify-between">
+                                                        <div class="flex items-center gap-3">
+                                                                <span class="material-symbols-outlined text-primary"
+                                                                        data-icon="check_circle" data-weight="fill"
+                                                                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                                                <span
+                                                                        class="font-body-md text-body-md font-bold text-on-background">passport_scan_v2.pdf</span>
+                                                        </div>
+                                                        <button
+                                                                class="text-secondary hover:text-error transition-colors">
+                                                                <span class="material-symbols-outlined"
+                                                                        data-icon="delete">delete</span>
+                                                        </button>
+                                                </div>
+                                        </div>
+                                        <div
+                                                class="bg-surface border-2 border-outline-variant rounded-xl p-md focus-within:border-primary focus-within:border-2 transition-all duration-200 lift-on-hover">
+                                                <div class="flex items-start gap-4">
+                                                        <div class="mt-1">
+                                                                <input class="w-6 h-6 rounded border-2 border-outline-variant text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface bg-surface transition-colors cursor-pointer"
+                                                                        id="doc2" type="checkbox" />
+                                                        </div>
+                                                        <div class="flex-1">
+                                                                <div class="flex items-center justify-between mb-2">
+                                                                        <div class="flex items-center gap-3">
+                                                                                <h3
+                                                                                        class="font-headline-md text-[24px] leading-[32px] text-on-background">
+                                                                                        <label class="cursor-pointer"
+                                                                                                for="doc2">Proof of
+                                                                                                Enrollment</label></h3>
+                                                                                <span
+                                                                                        class="bg-primary-container text-on-primary-container font-label-sm uppercase text-[12px] px-3 py-1 rounded-full">Required</span>
+                                                                        </div>
+                                                                        <!-- Tooltip Trigger -->
+                                                                        <div class="relative group/tooltip">
+                                                                                <span class="material-symbols-outlined text-secondary hover:text-on-background cursor-help"
+                                                                                        data-icon="info">info</span>
+                                                                                <div
+                                                                                        class="absolute right-0 bottom-full mb-2 w-64 bg-inverse-surface text-surface-bright p-3 rounded-lg text-sm opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-10 font-body-md shadow-lg border border-outline-variant">
+                                                                                        Usually provided by your
+                                                                                        university's international
+                                                                                        student office. It must show
+                                                                                        full-time status.
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-secondary mb-6">
+                                                                        Official letter from your institution confirming
+                                                                        your current enrollment status for the upcoming
+                                                                        academic year.</p>
+                                                                <!-- File Upload Action Area -->
+                                                                <div
+                                                                        class="border-2 border-dashed border-outline-variant hover:border-primary bg-surface-container-lowest rounded-xl p-8 flex flex-col items-center justify-center text-center transition-colors cursor-pointer group/upload">
+                                                                        <div
+                                                                                class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center mb-4 group-hover/upload:bg-primary-container transition-colors border border-outline-variant">
+                                                                                <span class="material-symbols-outlined text-secondary group-hover/upload:text-on-primary-container"
+                                                                                        data-icon="upload_file">upload_file</span>
+                                                                        </div>
+                                                                        <span
+                                                                                class="font-label-bold text-label-bold text-on-background mb-1">Click
+                                                                                to upload or drag &amp; drop</span>
+                                                                        <span
+                                                                                class="font-body-md text-body-md text-secondary text-sm">PDF,
+                                                                                JPG, or PNG (max. 10MB)</span>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div
+                                                class="bg-surface border-2 border-outline-variant rounded-xl p-md focus-within:border-primary focus-within:border-2 transition-all duration-200 lift-on-hover">
+                                                <div class="flex items-start gap-4">
+                                                        <div class="mt-1">
+                                                                <input class="w-6 h-6 rounded border-2 border-outline-variant text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface bg-surface transition-colors cursor-pointer"
+                                                                        id="doc3" type="checkbox" />
+                                                        </div>
+                                                        <div class="flex-1">
+                                                                <div class="flex items-center gap-3 mb-2">
+                                                                        <h3
+                                                                                class="font-headline-md text-[24px] leading-[32px] text-on-background">
+                                                                                <label class="cursor-pointer"
+                                                                                        for="doc3">Financial
+                                                                                        Statement</label></h3>
+                                                                        <span
+                                                                                class="border border-outline-variant font-label-sm uppercase text-[12px] px-3 py-1 rounded-full text-secondary">Optional</span>
+                                                                </div>
+                                                                <p class="font-body-md text-body-md text-secondary">Bank
+                                                                        statements from the last 3 months showing
+                                                                        sufficient funds to cover your stay, or a
+                                                                        scholarship award letter.</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Contextual Sidebar / Support Imagery Column -->
+                                <div class="lg:col-span-4 flex flex-col gap-md">
+                                        <!-- Glassmorphism-inspired Support Card -->
+                                        <div
+                                                class="bg-surface-container-low rounded-xl p-6 border border-outline-variant relative overflow-hidden juice-card">
+                                                <div
+                                                        class="absolute -right-10 -top-10 w-32 h-32 bg-primary-container rounded-full opacity-20 blur-2xl pointer-events-none">
+                                                </div>
+                                                <h4
+                                                        class="font-headline-md text-[20px] leading-[28px] text-on-background mb-3 relative z-10">
+                                                        Need a scanner?</h4>
+                                                <p class="font-body-md text-body-md text-secondary relative z-10">Use
+                                                        your smartphone to quickly digitize physical documents. We
+                                                        recommend using a well-lit area.</p>
+                                                <div
+                                                        class="mt-5 relative z-10 bg-surface border border-outline-variant rounded-lg p-3 flex items-center justify-between">
+                                                        <span
+                                                                class="font-label-sm text-label-sm uppercase tracking-widest text-on-background">Auto
+                                                                crop</span>
+                                                        <span class="material-symbols-outlined text-primary"
+                                                                style="font-variation-settings:'FILL' 1;">check_circle</span>
+                                                </div>
+                                        </div>
+                                        <!-- Visual Context Card -->
+                                        <div
+                                                class="rounded-xl overflow-hidden border-2 border-outline-variant h-64 relative bg-surface-container flex items-end p-4 doc-lines text-primary">
+                                                <div
+                                                        class="absolute inset-x-6 top-6 bg-surface border border-outline-variant rounded-lg p-4">
+                                                        <span></span><span class="w-4/5"></span><span
+                                                                class="w-2/3"></span>
+                                                </div>
+                                                <div class="w-full">
+                                                        <p
+                                                                class="font-label-sm uppercase text-on-background text-sm tracking-wider">
+                                                                Preparation is Key</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- Action Footer -->
+                        <div
+                                class="mt-xl flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-outline-variant pt-8">
+                                <button
+                                        class="font-label-bold text-label-bold text-on-background border-2 border-outline-variant px-8 py-4 rounded-full hover:bg-surface-container-highest transition-colors w-full sm:w-auto text-center">
+                                        I have these ready
+                                </button>
+                                <a href="task_complete.html"
+                                        class="font-label-bold text-label-bold bg-primary text-on-primary px-12 py-4 rounded-full hover:bg-surface-tint transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-2 group">
+                                        Next Step
+                                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                                                data-icon="arrow_forward">arrow_forward</span>
+                                </a>
+                        </div>
+                </div>
+                <!-- Footer (Minimal) -->
+                <footer
+                        class="w-full mt-auto bg-inverse-surface text-primary border-t-2 border-outline-variant px-md py-gutter flex flex-col md:flex-row justify-between items-center gap-4">
+                        <div class="font-headline-md text-[20px] text-surface-bright">Clairo</div>
+                        <p class="font-body-md text-body-md text-secondary-fixed text-center md:text-left">© 2024 Clairo
+                                Navigator. Empowering student journeys.</p>
+                        <div class="flex gap-6">
+                                <a class="font-label-sm text-label-sm uppercase text-secondary-fixed hover:text-surface-bright transition-opacity hover:opacity-80 focus:ring-2 focus:ring-primary-fixed"
+                                        href="#">Privacy Policy</a>
+                                <a class="font-label-sm text-label-sm uppercase text-secondary-fixed hover:text-surface-bright transition-opacity hover:opacity-80 focus:ring-2 focus:ring-primary-fixed"
+                                        href="#">Terms of Service</a>
+                                <a class="font-label-sm text-label-sm uppercase text-secondary-fixed hover:text-surface-bright transition-opacity hover:opacity-80 focus:ring-2 focus:ring-primary-fixed"
+                                        href="#">Contact Support</a>
+                        </div>
+                </footer>
+        </main>
+        <script src="clairo-ui.js"></script>
+</body>
+
+</html>

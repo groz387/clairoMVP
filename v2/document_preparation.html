@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="actual">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clairo - Document Collection</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link href="clairo-ui.css" rel="stylesheet" />
+</head>
+
+<body class="app-page document-page" data-mode="actual">
+        <div class="app-layout">
+                <aside class="sidebar" aria-label="Workspace navigation">
+                        <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                <span class="brand-logo" aria-hidden="true"></span>
+                        </a>
+
+                        <nav class="sidebar-nav">
+                                <a class="nav-item" href="index.html" data-mode-link>
+                                        <span class="material-symbols-outlined">dashboard</span>
+                                        Overview
+                                </a>
+                                <a class="nav-item active" href="select_service.html" data-mode-link>
+                                        <span class="material-symbols-outlined filled-icon">assignment</span>
+                                        My Tasks
+                                </a>
+                                <a class="nav-item" href="document_preparation.html" data-mode-link>
+                                        <span class="material-symbols-outlined">folder_shared</span>
+                                        Vault
+                                </a>
+                                <a class="nav-item" href="task_complete.html" data-mode-link>
+                                        <span class="material-symbols-outlined">person</span>
+                                        Account
+                                </a>
+                        </nav>
+
+                        <div class="sidebar-footer">
+                                <a class="btn btn-dark" href="select_service.html" data-mode-link>Start New Application</a>
+                        </div>
+                </aside>
+
+                <main class="app-main">
+                        <header class="mobile-top">
+                                <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                        <span class="brand-logo" aria-hidden="true"></span>
+                                </a>
+                                <a class="icon-btn" href="select_service.html" data-mode-link aria-label="Back to service selection">
+                                        <span class="material-symbols-outlined">arrow_back</span>
+                                </a>
+                        </header>
+
+                        <div class="workspace">
+                                <section class="workflow-header" data-reveal>
+                                        <div class="header-row">
+                                                <div>
+                                                        <p class="eyebrow">Visa Renewal</p>
+                                                        <h1 class="page-title">Document Collection</h1>
+                                                </div>
+                                                <p class="step-label">Step 2 of 3</p>
+                                        </div>
+                                        <div class="stepper" aria-label="Application progress">
+                                                <span class="step done"></span>
+                                                <span class="step active"></span>
+                                                <span class="step"></span>
+                                        </div>
+                                </section>
+
+                                <section class="content-grid" aria-label="Document checklist">
+                                        <div class="stack" data-reveal>
+                                                <article class="doc-card is-highlighted">
+                                                        <div class="doc-main">
+                                                                <span class="check-dot done material-symbols-outlined filled-icon" aria-hidden="true">check</span>
+                                                                <div>
+                                                                        <div class="doc-heading">
+                                                                                <h2 class="doc-title">Current Passport</h2>
+                                                                                <span class="badge required">Required</span>
+                                                                        </div>
+                                                                        <p class="doc-copy">Must be valid for at least 6 months beyond your intended stay. Ensure you have at least two blank pages available.</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="file-pill">
+                                                                <span class="file-pill-left">
+                                                                        <span class="material-symbols-outlined filled-icon">check_circle</span>
+                                                                        <strong>passport_scan_v2.pdf</strong>
+                                                                </span>
+                                                                <button class="icon-btn" type="button" aria-label="Remove passport scan">
+                                                                        <span class="material-symbols-outlined">delete</span>
+                                                                </button>
+                                                        </div>
+                                                </article>
+
+                                                <article class="doc-card">
+                                                        <div class="doc-main">
+                                                                <span class="check-dot" aria-hidden="true"></span>
+                                                                <div>
+                                                                        <div class="doc-heading">
+                                                                                <h2 class="doc-title">Proof of Enrollment</h2>
+                                                                                <span class="badge required">Required</span>
+                                                                                <span class="info-icon material-symbols-outlined" title="Usually provided by your university's international student office.">info</span>
+                                                                        </div>
+                                                                        <p class="doc-copy">Official letter from your institution confirming your current enrollment status for the upcoming academic year.</p>
+                                                                </div>
+                                                        </div>
+                                                        <button class="upload-zone" type="button" data-upload-card aria-pressed="false">
+                                                                <span class="upload-inner">
+                                                                        <span class="upload-icon material-symbols-outlined" data-upload-icon>upload_file</span>
+                                                                        <span class="upload-copy">
+                                                                                <strong data-upload-status data-empty="Click to upload or drag & drop" data-complete="enrollment_letter.pdf">Click to upload or drag &amp; drop</strong>
+                                                                                <span>PDF, JPG, or PNG (max. 10MB)</span>
+                                                                        </span>
+                                                                        <span class="upload-action" data-upload-action>Add file</span>
+                                                                </span>
+                                                        </button>
+                                                </article>
+
+                                                <article class="doc-card compact">
+                                                        <div class="doc-main">
+                                                                <span class="check-dot" aria-hidden="true"></span>
+                                                                <div>
+                                                                        <div class="doc-heading">
+                                                                                <h2 class="doc-title">Financial Statement</h2>
+                                                                                <span class="badge">Optional</span>
+                                                                        </div>
+                                                                        <p class="doc-copy">Bank statements from the last 3 months showing sufficient funds to cover your stay, or a scholarship award letter.</p>
+                                                                </div>
+                                                        </div>
+                                                </article>
+                                        </div>
+
+                                        <aside class="side-stack" data-reveal>
+                                                <section class="surface-panel">
+                                                        <h2 class="panel-title">Need a scanner?</h2>
+                                                        <p class="panel-copy">Use your smartphone to quickly digitize physical documents. We recommend using a well-lit area.</p>
+                                                </section>
+
+                                                <section class="surface-panel" id="ai-status-panel">
+                                                        <span class="status-pill dark">Specter AI Idle</span>
+                                                        <h2 class="panel-title" id="ai-status-title">Waiting for files</h2>
+                                                        <p class="panel-copy" id="ai-status-copy">Upload documents to begin automated verification and data extraction.</p>
+                                                </section>
+                                        </aside>
+                                </section>
+
+                                <div class="action-strip">
+                                        <a class="btn btn-secondary" href="select_service.html" data-mode-link>I have these ready</a>
+                                        <a class="btn btn-primary" href="task_complete.html" data-mode-link>
+                                                Next Step
+                                                <span class="material-symbols-outlined">arrow_forward</span>
+                                        </a>
+                                </div>
+                        </div>
+
+                        <footer class="footer">
+                                <div class="footer-inner">
+                                        <a class="brand" href="index.html" data-mode-link aria-label="Clairo home">
+                                                <span class="brand-logo" aria-hidden="true"></span>
+                                        </a>
+                                        <div class="footer-copy">© 2026 Clairo. Empowering student journeys.</div>
+                                        <nav class="footer-links" aria-label="Footer navigation">
+                                                <a href="#">Privacy Policy</a>
+                                                <a href="#">Terms of Service</a>
+                                                <a href="#">Contact Support</a>
+                                        </nav>
+                                </div>
+                        </footer>
+                </main>
+        </div>
+
+        <div class="modal-overlay" id="ocr-modal">
+                <div class="modal">
+                        <div class="modal-header">
+                                <h2 class="modal-title">Verify Extracted Data</h2>
+                                <p class="modal-copy">Specter AI has extracted the following information from your document.</p>
+                        </div>
+                        <div class="extracted-data">
+                                <div class="data-row">
+                                        <span class="data-label">Document Type</span>
+                                        <span class="data-value" id="ocr-doc-type">ID Document</span>
+                                </div>
+                                <div class="data-row">
+                                        <span class="data-label">Full Name</span>
+                                        <span class="data-value" data-mode-applicant>Vincent Vega</span>
+                                </div>
+                                <div class="data-row">
+                                        <span class="data-label">Verification Score</span>
+                                        <span class="data-value" style="color: #10B981;">98% Match</span>
+                                </div>
+                        </div>
+                        <div class="modal-actions">
+                                <button class="btn btn-secondary" id="btn-ocr-cancel">Retake</button>
+                                <button class="btn btn-primary" id="btn-ocr-confirm">Confirm & Save</button>
+                        </div>
+                </div>
+        </div>
+
+        <script src="clairo-ui.js"></script>
+</body>
+
+</html>
